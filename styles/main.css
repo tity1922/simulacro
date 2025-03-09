@@ -112,6 +112,24 @@ nav ul li a:hover {
     padding: 0; /* Elimina cualquier relleno interno */
 }
 
+/* Estilos para la lista de actores */
+.actores-lista {
+    font-size: 14px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita para destacar */
+    color: #f85757; /* Color amarillo para destacar */
+    margin-top: 10px; /* Espaciado respecto al título */
+    display: flex; /* Para que los nombres se alineen en fila */
+    gap: 15px; /* Espaciado entre los nombres */
+    flex-wrap: wrap; /* Permite que los nombres pasen a otra línea si es necesario */
+}
+
+/* Estilo para cada nombre de actor */
+.actores-lista span {
+    background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    padding: 5px 15px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-transform: capitalize; /* Primera letra de cada nombre en mayúscula */
+}
 
 
 .galeria {
