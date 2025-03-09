@@ -9,6 +9,31 @@ body{
     padding-top: 50px;
 }
 
+#intro-screen {
+    position: fixed; /* Fija la pantalla de intro */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegúrate de que esté por encima del contenido principal */
+}
+
+#intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video cubra toda la pantalla */
+}
+
+#main-content {
+    display: none; /* Al principio ocultamos el contenido principal */
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
 /* Para el carrusel */
 .swiper {
     width: 100vw;

@@ -18,6 +18,12 @@
     <!-- Fuente personalizada desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Pantalla de introducción (video de inicio) -->
+    <div id="intro-screen">
+        <video id="intro-video" autoplay muted>
+            <source src="img/Netflix New Logo Animation 2019.mp4" type="video/mp4">
+        </video>
+    </div>
     <!-- Sección del título de la película -->
     <div class="titulo">
         <h1>CORRE</h1>
@@ -117,6 +123,15 @@
 
     <!-- Configuración de Swiper -->
     <script>
+        
+        // Espera que el video de introducción termine
+        document.getElementById('intro-video').addEventListener('ended', function() {
+            // Oculta el video de introducción
+            document.getElementById('intro-screen').style.display = 'none';
+            // Muestra el contenido principal de la página
+            document.getElementById('main-content').style.display = 'block';
+        });    
+
         document.addEventListener("DOMContentLoaded", function () {
             new Swiper(".swiper", {
                 loop: true, // Hace que el carrusel sea infinito
