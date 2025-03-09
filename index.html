@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelicula</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+
+    <div class="titulo">
+        <h1> CORRE</h1>
+    </div>
+
+    <div class="div-contenedor">
+        <h2>Tras años de aislamiento, una joven en silla de ruedas comienza a sospechar que su madre alberga oscuros secretos que le impiden alcanzar su tan ansiada libertad. Dicen que el amor de una madre es eterno pero para Chloe no es un consuelo, sino una amenaza. Hay algo extraño, incluso siniestro en la relación de ella y su madre, Diane. Diane ha criado a su hija completamente aislada, controlando cada uno de sus movimientos, pero Chloe pronto empezará a descubrir los oscuros secretos de su madre.
+        </h2>
+    </div>
+
+
+    <div id="nav-placeholder"></div>  <!-- Aquí se insertará el nav -->
+        <!-- Carrusel de imágenes y videos -->
+        <div class="swiper carrusel">
+            <div class="swiper-wrapper">
+                <!-- Video 1 -->
+                <div class="swiper-slide">
+                    <video autoplay muted loop playsinline>
+                        <source src="img/3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Video 2 -->
+                <div class="swiper-slide">
+                    <video autoplay muted loop playsinline>
+                        <source src="img/2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Imagen 1 -->
+                <div class="swiper-slide">
+                    <img src="img/imagen-2.png" alt="Imagen 1">
+                </div>
+            </div>
+            <!-- Botones de navegación -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    
+
+    
+    
+
+    
+
+
+    <div id="footer-placeholder"></div>  <!-- Aquí se insertará el footer -->
+
+    <script src="script/index.js"></script>
+    <script src="script/components.js"></script>  <!-- Cargar componentes -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".swiper", {
+                loop: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: null,
+                },
+            });
+        });
+    </script>
+
+</body>
+</html>
