@@ -60,18 +60,22 @@ body{
 
 /* NAV - Fijo en la parte superior */
 nav {
-    position: fixed; /* Corregido de 'flex' a 'fixed' */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
     height: 60px;
     background: rgba(0, 0, 0, 0.8);
-    padding: 5px 0;
+    padding: 5px 20px;
     z-index: 1000;
-    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Mantiene los elementos centrados */
+    justify-content: space-between;; /* Mantiene los elementos centrados */
+}
+
+nav img {
+    height: 70px; /* Ajusta la altura del logo*/
+    margin-right: auto;
 }
 
 /* Estilo de los enlaces del NAV - Transparentes por defecto */
@@ -79,7 +83,8 @@ nav ul {
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0;
+    margin: 0 auto; /* Centra el menú */
+    gap: 30px;
 }
 
 nav ul li {
