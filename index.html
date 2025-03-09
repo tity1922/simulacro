@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración de la codificación y visualización en dispositivos móviles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título de la pestaña del navegador -->
     <title>Pelicula</title>
+    
+    <!-- Enlace a la hoja de estilos principal -->
     <link rel="stylesheet" href="styles/main.css">
 
+    <!-- Enlace a la hoja de estilos de Swiper (para el carrusel) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 <body>
+    <!-- Fuente personalizada desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Sección del título de la película -->
     <div class="titulo">
         <h1>CORRE</h1>
         <p>Actores</p>
         <p class="sinopsis">
-            Tras años de aislamiento, una joven en silla de ruedas comienza a sospechar que su madre alberga oscuros secretos que le impiden alcanzar su tan ansiada libertad. Dicen que el amor de una madre es eterno pero para Chloe no es un consuelo, sino una amenaza. Hay algo extraño, incluso siniestro en la relación de ella y su madre, Diane. Diane ha criado a su hija completamente aislada, controlando cada uno de sus movimientos, pero Chloe pronto empezará a descubrir los oscuros secretos de su madre.        </p>
+            <!-- Sinopsis de la película -->
+            Tras años de aislamiento, una joven en silla de ruedas comienza a sospechar que su madre alberga oscuros secretos que le impiden alcanzar su tan ansiada libertad. Dicen que el amor de una madre es eterno pero para Chloe no es un consuelo, sino una amenaza. Hay algo extraño, incluso siniestro en la relación de ella y su madre, Diane. Diane ha criado a su hija completamente aislada, controlando cada uno de sus movimientos, pero Chloe pronto empezará a descubrir los oscuros secretos de su madre.
+        </p>
     </div>
     
+    <!-- Espacio reservado para la navegación (se cargará dinámicamente con JavaScript) -->
+    <div id="nav-placeholder"></div>
 
-
-    <div id="nav-placeholder"></div>  <!-- Aquí se insertará el nav -->
-        <!-- Carrusel de imágenes y videos -->
-        <div class="swiper carrusel">
-            <div class="swiper-wrapper">
-                <!-- Video 1 -->
-                <div class="swiper-slide">
-                    <video autoplay muted loop playsinline>
-                        <source src="img/3.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <!-- Video 2 -->
-                <div class="swiper-slide">
-                    <video autoplay muted loop playsinline>
-                        <source src="img/2.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <!-- Imagen 1 -->
-                <div class="swiper-slide">
-                    <img src="img/imagen-2.png" alt="Imagen 1">
-                </div>
+    <!-- Carrusel de imágenes y videos -->
+    <div class="swiper carrusel">
+        <div class="swiper-wrapper">
+            <!-- Video 1 -->
+            <div class="swiper-slide">
+                <video autoplay muted loop playsinline>
+                    <source src="img/3.mp4" type="video/mp4">
+                </video>
             </div>
-            <!-- Botones de navegación -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <!-- Video 2 -->
+            <div class="swiper-slide">
+                <video autoplay muted loop playsinline>
+                    <source src="img/2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- Imagen 1 -->
+            <div class="swiper-slide">
+                <img src="img/imagen-2.png" alt="Imagen 1">
+            </div>
         </div>
-
+        <!-- Botones de navegación del carrusel -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
     
-
-    <!-- esta es la galeria donde si queremos agregar mas imagenes tendremos que agregar una mas alai lista  -->
-
+    <!-- Galería de imágenes -->
     <div class="galeria">
         <h2>GALERIA</h2>
-
-    <!-- lista de imagenes -->
+        <!-- Lista de imágenes -->
         <img src="img/gallery1.jpg" alt="Imagen 1">
         <img src="img/gallery2.jpg" alt="Imagen 2">
         <img src="img/gallery3.jpg" alt="Imagen 3">
@@ -62,35 +68,62 @@
         <img src="img/gallery5.jpg" alt="Imagen 5">
         <img src="img/gallery6.jpg" alt="Imagen 6">
     </div>
-           
-
-    <div>
-        <h1>FORM</h1>
-        
+    
+    <!-- Formulario de opinión sobre la película -->
+    <div class="formulario">
+        <h2>¿Qué te pareció la película?</h2>
+        <form id="form-opinion">
+            <!-- Campo para el nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+    
+            <!-- Selección de calificación -->
+            <label for="calificacion">Calificación:</label>
+            <select id="calificacion" required>
+                <option value="5">★★★★★ - Excelente</option>
+                <option value="4">★★★★☆ - Muy buena</option>
+                <option value="3">★★★☆☆ - Buena</option>
+                <option value="2">★★☆☆☆ - Regular</option>
+                <option value="1">★☆☆☆☆ - Mala</option>
+            </select>
+    
+            <!-- Área de texto para comentarios -->
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" rows="4" required></textarea>
+    
+            <!-- Botón para enviar la opinión -->
+            <button type="submit">Enviar Opinión</button>
+        </form>
+    
+        <!-- Promedio de calificación mostrado dinámicamente -->
+        <h3>Promedio de Calificación:</h3>
+        <p id="promedio-calificacion">Aún no hay calificaciones.</p>
     </div>
- 
-    <div id="footer-placeholder"></div>  <!-- Aquí se insertará el footer -->
-
+    
+    <!-- Espacio reservado para el footer (se cargará dinámicamente con JavaScript) -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Archivos JavaScript externos -->
     <script src="script/index.js"></script>
-    <script src="script/components.js"></script>  <!-- Cargar componentes -->
-
-    <!-- Swiper JS -->
+    <script src="script/components.js"></script>  <!-- Cargar componentes dinámicos -->
+    
+    <!-- Script de Swiper (carrusel) -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
+    <!-- Configuración de Swiper -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             new Swiper(".swiper", {
-                loop: true,
+                loop: true, // Hace que el carrusel sea infinito
                 navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next", // Botón siguiente
+                    prevEl: ".swiper-button-prev", // Botón anterior
                 },
                 pagination: {
-                    el: null,
+                    el: null, // No se usa paginación
                 },
             });
         });
     </script>
-
 </body>
 </html>

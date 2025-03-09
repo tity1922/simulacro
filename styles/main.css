@@ -150,6 +150,91 @@ nav ul li a:hover {
 }
 
 
+/* Contenedor del formulario */
+.formulario {
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Títulos del formulario */
+.formulario h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilos generales para etiquetas */
+.formulario label {
+    display: block;
+    font-size: 18px;
+    margin: 10px 0 5px;
+    text-align: left;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilos para los campos de entrada */
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #d43333;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Cambia el color del borde y fondo cuando el usuario escribe */
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    border: 1px solid #ff4747;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Botón de enviar */
+.formulario button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background: #d43333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Efecto hover en el botón */
+.formulario button:hover {
+    background: #ff4747;
+}
+
+/* Sección del promedio de calificación */
+#promedio-calificacion {
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffcc00; /* Color amarillo para destacar */
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
 
 
 
