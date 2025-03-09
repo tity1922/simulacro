@@ -1,0 +1,126 @@
+body{
+    font-family:  'Cinzel Decorative', serif;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding-top: 50px;
+}
+
+/* Para el carrusel */
+.swiper {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.swiper-slide img, .swiper-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next {
+    right: 10px; /* Separación del borde derecho */
+    color: white !important; /* Cambia el color a blanco */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Separación del borde izquierdo */
+    color: white !important; /* Cambia el color a blanco */
+}
+
+/* NAV - Fijo en la parte superior */
+nav {
+    position: fixed; /* Corregido de 'flex' a 'fixed' */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px 0;
+    z-index: 1000;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Mantiene los elementos centrados */
+}
+
+/* Estilo de los enlaces del NAV - Transparentes por defecto */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: transparent; /* Fondo transparente */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: #d43333; /* Cambio de color al pasar el mouse */
+    color: white;
+    border-color: #d43333;
+}
+
+.titulo {
+    display: block;
+    text-align: left; /* Alineado a la izquierda */
+    font-size: 70px;
+    letter-spacing: 4px; /* Espaciado entre letras */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-left: 50px; /* Mueve el texto a la izquierda */
+    margin-top: 200px; /* Baja el texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.div-contenedor {
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    position: relative; /* Permite mantener el flujo normal del contenido */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 10px 0; /* Espaciado arriba y abajo */
+}
+
+h2 {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-left: 10px; /* Mueve el texto a la izquierda */
+    width: 800px; /* Limita el ancho a 200px */
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente */
+    font-weight: 400; /* Evita la negrita */
+}
+
+/* FOOTER - Fijo en la parte inferior */
+footer {
+    position: relative;  /* Fija el footer en la parte inferior */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(96, 96, 94, 0.9);
+    color: white;
+    padding: 5px;
+    height: 40px;
+    display: flex;  /* Cambiado de 'fixed' a 'flex' */
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
