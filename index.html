@@ -13,6 +13,9 @@
 
     <!-- Enlace a la hoja de estilos de Swiper (para el carrusel) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Son los logos de las redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <!-- Fuente personalizada desde Google Fonts -->
@@ -125,6 +128,14 @@
     <!-- Configuración de Swiper -->
     <script>
         
+         // Espera que el video de introducción termine
+         document.getElementById('intro-video').addEventListener('ended', function() {
+            // Oculta el video de introducción
+            document.getElementById('intro-screen').style.display = 'none';
+            // Muestra el contenido principal de la página
+            document.getElementById('main-content').style.display = 'block';
+        });  
+
         /* Función que carga componentes dinámicos como la barra de navegación y el footer */
         function cargarComponentes() {
             // Obtiene los elementos donde se insertarán los componentes
@@ -150,20 +161,38 @@
             if (footerPlaceholder) {
                 footerPlaceholder.innerHTML = `
                     <footer>
-                        <p>&copy; 2025</p>
-                        <p>Contacto: contacto@.com</p>
+                        <div class="footer-container">
+                            <div class="contacto">
+                                <h3>Contacto</h3>
+                                <p>Dirección: 5808 W Sunset Blvd, Los Angeles</p>
+                                <p>Pagina oficial: <a href="https://www.netflix.com/co/">https://www.netflix.com/co/</a></p>
+                                <p>Tel: <a href="tel:+1 877-742-1335">+1 +1 877-742-1335</a></p>
+                            </div>
+                            
+                            <div class="redes-sociales">
+                                <a href="https://www.facebook.com/NetflixLatino/?locale=es_LA"><i class="fab fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/netflixlat/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@netflixlat?lang=es"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                        <div id="map">
+                            <iframe
+                                width="600"
+                                height="450"
+                                style="border:0;"
+                                loading="lazy"
+                                allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.146698263473!2d-118.3162593!3d34.0976899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf4eb5169313%3A0x45a6f5ad6fc5cf2b!2sNetflix!5e0!3m2!1ses!2sus!4v1709940674896!5m2!1ses!2sus">
+                            </iframe>
+                        </div>
+                        <div class="copyright">
+                            <p>© 2025 Netflix. Todos los derechos reservados.</p>
+                        </div>
                     </footer>
                 `;
             }
-        }
-        
-        // Espera que el video de introducción termine
-        document.getElementById('intro-video').addEventListener('ended', function() {
-            // Oculta el video de introducción
-            document.getElementById('intro-screen').style.display = 'none';
-            // Muestra el contenido principal de la página
-            document.getElementById('main-content').style.display = 'block';
-        });    
+        }  
 
         // Codigo para el carrusel
         document.addEventListener("DOMContentLoaded", function () {
@@ -178,6 +207,9 @@
                 },
             });
         });
+
+        
     </script>
+
 </body>
 </html>

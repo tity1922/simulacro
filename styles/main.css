@@ -9,6 +9,11 @@ body{
     padding-top: 50px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Se carga el video del principio osea la intro */
 #intro-screen {
     position: fixed; /* Fija la pantalla de intro */
     top: 0;
@@ -282,21 +287,57 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-
-
-
 /* FOOTER - Fijo en la parte inferior */
 footer {
-    position: relative;  /* Fija el footer en la parte inferior */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(96, 96, 94, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 5px;
-    height: 40px;
-    display: flex;  /* Cambiado de 'fixed' a 'flex' */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px; /* Tamaño de fuente base más pequeño */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.contacto, .enlaces {
+    margin: 10px;
+}
+
+.contacto a{
+    color: #e51122; /* Rojo suave y elegante */
+}
+
+.enlaces ul {
+    list-style: none;
+    padding: 0;
+}
+
+.enlaces ul li {
+    margin: 5px 0;
+}
+
+.enlaces ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    border: 1;
 }
